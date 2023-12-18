@@ -5,69 +5,128 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Me</title>
-    <link rel="stylesheet" href="styles.css">
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
 </head>
 
 <body>
 
-    <header class="contactheader">
-        <nav>
-            <a href="homepage.html">Home</a>
-            <a href="resumepage.html">Resume</a>
-            <a href="servicepage.html">Service</a>
-            <a href="blogpage.html">Blog</a>
-        </nav>
-    </header>
+    
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Blog Page</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+        
+    <body>
+        
+    <nav class="navbar is-fixed-top has-background-warning" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
 
-    <div class="contanctcontent">
-        <div class="contactcontainer">
-            <div class="contactleft-container">
-                <h1>Contact Information</h1>
-                <h2>Email</h2>
+        <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-end">
+                <a href="homepage.html" class="navbar-item has-text-dark">Home</a>
+                <a href="resumepage.html" class="navbar-item has-text-dark">Resume</a>
+                <a href="servicepage.html" class="navbar-item has-text-dark">Services</a>
+                <a href="blogpage.html" class="navbar-item has-text-dark">Blog</a>
+            </div>
+        </div>
+    </nav> 
+       
+    
+
+    <div class="container mt-6">
+        <div class="columns">
+            <div class="box bvideo-container has-background-warning" >
+                <h1 class="title is-2">Contact Information</h1>
+                <h2 class="subtitle is-4">Email</h2>
                 <p>saramohammednassir1@gmail.com</p>
-                <h2>Phone</h2>
+                <h2 class="subtitle is-4">Phone</h2>
                 <p>+25167269790</p>
-                <h2>Address</h2>
+                <h2 class="subtitle is-4">Address</h2>
                 <p>Arada, Adiss Ababa</p>
             </div>
 
-            <div class="contactright-container">
-                <h1>Get In Touch</h1>
-                <div class="input-group">
-                    <input type="text" id="name" name="name" placeholder="Your Name">
+            <div class="column is-half" >
+                <h1 class="title is-2">Get In Touch</h1>
+                <div class="field">
+                    <label class="label">Your Name</label>
+                    <div class="control">
+                        <input class="input" type="text" id="name" name="name" placeholder="Your Name">
+                    </div>
                 </div>
-                
-                <div class="input-group">
 
-                    <input type="email" id="email" name="email" placeholder="Your Email">
+                <div class="field">
+                    <label class="label">Your Email</label>
+                    <div class="control">
+                        <input class="input" type="email" id="email" name="email" placeholder="Your Email">
+                    </div>
                 </div>
-                
-                <div class="input-group">
-                    <textarea id="message" name="message" placeholder="Your Message"></textarea>
-                </div>
-                
-                
-                <div class="input-group">
-                    
-                    <input type="text" id="subject" name="subject" placeholder="Your Subject" required>
-                    
-                </div>
-                
 
-                <button class="send-button">Send Message</button>
+                <div class="field">
+                    <label class="label">Your Message</label>
+                    <div class="control">
+                        <textarea class="textarea" id="message" name="message" placeholder="Your Message"></textarea>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label class="label">Your Subject</label>
+                    <div class="control">
+                        <input class="input" type="text" id="subject" name="subject" placeholder="Your Subject" required>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <div class="control">
+                        <button class="button is-primary">Send Message</button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
-    <footer class="contactfooter">
-        <div class="social-icons">
-            <a href="https://instagram.com/sarin_a7077?igshid=MzMyNGUyNmU2YQ==" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://t.me/sevgili02" target="_blank"><i class="fab fa-telegram"></i></a>
-            <a href="https://www.facebook.com/profile.php?id=100091143585896" target="_blank"><i class="fab fa-facebook"></i></a>
+    <footer class="footer has-text-centered has-background-warning">
+        <div class="content has-text-centered">
+            <div class="social-icons">
+                <a href="https://instagram.com/sarin_a7077?igshid=MzMyNGUyNmU2YQ==" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://t.me/sevgili02" target="_blank"><i class="fab fa-telegram"></i></a>
+                <a href="https://www.facebook.com/profile.php?id=100091143585896" target="_blank"><i class="fab fa-facebook"></i></a>
+            </div>
         </div>
     </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
 
+            const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+            if ($navbarBurgers.length > 0) {
+
+                $navbarBurgers.forEach(function ($el) {
+                    $el.addEventListener('click', function () {
+
+                        const target = $el.dataset.target;
+                        const $target = document.getElementById(target);
+
+                        $el.classList.toggle('is-active');
+                        $target.classList.toggle('is-active');
+
+                    });
+                });
+            }
+
+        });
+    </script>
 </body>
 
 </html>

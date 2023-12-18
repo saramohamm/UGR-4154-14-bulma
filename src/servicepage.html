@@ -5,51 +5,98 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Service Page</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
 </head>
 
 <body>
-    <header class="serviceheader">
-        <a href="servicepage.html">Service</a>
-        <a href="homepage.html">Home</a>
-        <a href="aboutpage.html">About</a>
-        <a href="resumepage.html">Resume</a>
-        <a href="blogpage.html">Blog</a>
-    </header>
+    <nav class="navbar is-fixed-top has-background-warning" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
 
-    <div class="sercontainer">
-        <h1 class="service-heading">My Services</h1>
-
-        <div class="service-container">
-            <div class="service-item">
-                <img src="images/service1.jpg" alt="Service Image">
-                <h2 id="servicelisth2">App Adventures</h2>
-            <p>Dreaming of your own app? We'll turn that dream into reality! Learn the basics of mobile app development in a relaxed way. Android or iOS, let's explore together.
-            </p></div>
-
-            <div class="service-item">
-                <img src="images/website.jpg" alt="Service Image">
-                <h2>Easy-Peasy Websites</h2>
-            <p>Want your own website? Let's make it super easy! I'll guide you through creating a simple and stylish webpage. No tech jargon, just fun and creativity with HTML and CSS.
-            </p> </div>
-
-            <div class="service-item">
-                <img src="images/graphic.jpg" alt="Service Image">
-                <h2>Graphic Design</h2>
-                <p> Design eye-catching graphics for your brand, including logos, posters, and social media posts.</p>
-            </div>
-
-            <div class="service-item">
-                <img src="images/tech.png" alt="Service Image">
-                <h2>Tech Support</h2>
-                <p> Provide technical support and troubleshooting services to keep your systems running smoothly.</p>
+        <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-end">
+                <a href="homepage.html" class="navbar-item has-text-dark">Home</a>
+                <a href="resumepage.html" class="navbar-item has-text-dark">Resume</a>
+                <a href="servicepage.html" class="navbar-item has-text-dark">Services</a>
+                <a href="blogpage.html" class="navbar-item has-text-dark">Blog</a>
             </div>
         </div>
-    </div>
+    </nav>
+    <div class="container sercontainer">
+        
+        <h1 class="title is-1 service-heading mt-6" >My Services</h1>
 
-    <footer class="servicefooter">
-        <a href="contactpage.html">Contact Me</a>
+        
+         <div class="columns is-multiline service-container">
+             <div class="column is-half-tablet is-one-quarter-desktop">
+                 <div class="box service-item">
+                     <img src="images/service1.jpg" alt="Service Image">
+                     <h2 class="title is-4" id="servicelisth2">App Adventures</h2>
+                     <p>Dreaming of your own app? We'll turn that dream into reality! Learn the basics of mobile app development in a relaxed way. Android or iOS, let's explore together.</p>
+                 </div>
+             </div>
+   
+             <div class="column is-half-tablet is-one-quarter-desktop">
+                 <div class="box service-item ">
+                     <img src="images/website.jpg" alt="Service Image">
+                     <h2 class="title is-4">Easy-Peasy Websites</h2>
+                     <p>Want your own website? Let's make it super easy! I'll guide you through creating a simple and stylish webpage. No tech jargon, just fun and creativity with HTML and CSS.</p>
+                 </div>
+             </div>
+   
+             <div class="column is-half-tablet is-one-quarter-desktop">
+                 <div class="box service-item">
+                     <img src="images/graphic.jpg" alt="Service Image">
+                     <h2 class="title is-4">Graphic Design</h2>
+                     <p>Design eye-catching graphics for your brand, including logos, posters, and social media posts.</p>
+                 </div>
+             </div>
+   
+             <div class="column is-half-tablet is-one-quarter-desktop">
+                 <div class="box service-item">
+                     <img src="images/tech.png" alt="Service Image">
+                     <h2 class="title is-4">Tech Support</h2>
+                     <p>Provide technical support and troubleshooting services to keep your systems running smoothly.</p>
+                 </div>
+             </div>
+         </div>
+     </div>
+
+    <footer class="footer servicefooter">
+        <a href="contactpage.html" class="title is-4">Contact Me</a>
     </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+
+           
+            const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+         
+            if ($navbarBurgers.length > 0) {
+
+                
+                $navbarBurgers.forEach(function ($el) {
+                    $el.addEventListener('click', function () {
+
+                     
+                        const target = $el.dataset.target;
+                        const $target = document.getElementById(target);
+
+                       
+                        $el.classList.toggle('is-active');
+                        $target.classList.toggle('is-active');
+
+                    });
+                });
+            }
+
+        });
+    </script>
 </body>
 
 </html>

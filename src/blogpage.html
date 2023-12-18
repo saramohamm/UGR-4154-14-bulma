@@ -5,51 +5,95 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog Page</title>
-    <link rel="stylesheet" href="styles.css">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
 </head>
 
 <body>
 
-    <header class="blogheader">
-        <nav>
-            <a href="homepage.html">Home</a>
-            <a href="aboutpage.html">About</a>
-            <a href="resumepage.html">Resume</a>
-            <a href="servicepage.html">Services</a>
-        </nav>
-    </header>
-
-    <div class="bcontent">
-        <h1 style="font-family: 'Playfair Display', serif;">Blog</h1>
-
-        <div class="bvideo-container">
-            <iframe src="videos/sciencemuseum.mp4" frameborder="0" allowfullscreen></iframe>
-            <p>Explore the wonders of the Ethiopian Science Museum in this captivating video. Learn about the fascinating exhibits, interactive displays, and the museum's contribution to promoting scientific knowledge in Ethiopia.</p>
+    
+    <nav class="navbar is-fixed-top has-background-warning" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
         </div>
 
-        <div class="bcontainer">
-            <img src="images/sunset.jpg" alt="Image 1">
-            <p> Witness a breathtaking sunset over the Ethiopian mountains. The vibrant colors and serene landscape create a mesmerizing scene, capturing the beauty of nature.This make it a perfect moment to share.</p>
+        <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-end">
+                <a href="homepage.html" class="navbar-item has-text-dark">Home</a>
+                <a href="aboutpage.html" class="navbar-item has-text-dark">About</a>
+                <a href="resumepage.html" class="navbar-item has-text-dark">Resume</a>
+                <a href="servicepage.html" class="navbar-item has-text-dark">Services</a>
+            </div>
+        </div>
+    </nav>
+
+   
+    <section class="section bcontent">
+        <h1 class="title is-size-1 has-text-centered" >Blog</h1>
+
+        
+        <div class="box bvideo-container has-background-warning">
+            <iframe src="videos/sciencemuseum.mp4" frameborder="0" allowfullscreen class="has-ratio" width="100%"></iframe>
+            <p class="has-text-dark">Explore the wonders of the Ethiopian Science Museum in this captivating video. Learn about the fascinating exhibits, interactive displays, and the museum's contribution to promoting scientific knowledge in Ethiopia.</p>
         </div>
 
-        <div class="bcontainer">
-            <img src="images/rain.jpg" alt="Image 2">
-            <p>Experience the charm of city streets during a rainy day in Ethiopia. The reflections on the wet pavement add an artistic touch, transforming the urban environment into a captivating scene.</p>
+        
+        <div class="box bcontainer has-background-warning">
+            <img src="images/sunset.jpg" alt="Image 1" >
+            <p class="has-text-dark">Witness a breathtaking sunset over the Ethiopian mountains. The vibrant colors and serene landscape create a mesmerizing scene, capturing the beauty of nature. This makes it a perfect moment to share.</p>
         </div>
 
-        <div class="baudio-container">
+        <div class="box bcontainer has-background-warning">
+            <img src="images/rain.jpg" alt="Image 2" >
+            <p class="has-text-dark">Experience the charm of city streets during a rainy day in Ethiopia. The reflections on the wet pavement add an artistic touch, transforming the urban environment into a captivating scene.</p>
+        </div>
+
+       
+        <div class="box baudio-container has-background-warning">
             <audio controls>
                 <source src="audios/calmingaudio.mp3" type="audio/mp3">
                 Your browser does not support the audio tag.
             </audio>
-            <p>Listen to this calming instrumental music while reading a book or working. It's perfect for creating a focused and tranquil environment.</p>
+            <p class="has-text-dark">Listen to this calming instrumental music while reading a book or working. It's perfect for creating a focused and tranquil environment.</p>
         </div>
-    </div>
+    </section>
 
-    <footer class="blogfooter">
-        <a href="contactpage.html">Contact Me</a>
+
+   
+    <footer class="footer has-text-centered has-background-warning" >
+        <a href="contactpage.html" class="has-text-dark">Contact Me</a>
     </footer>
 
+    
+    <script defer src="https://cdn.jsdelivr.net/npm/bulma@0.9.3/js/bulma.min.js"></script>
+
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+
+            const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+            if ($navbarBurgers.length > 0) {
+
+                $navbarBurgers.forEach(function ($el) {
+                    $el.addEventListener('click', function () {
+
+                        const target = $el.dataset.target;
+                        const $target = document.getElementById(target);
+
+                        $el.classList.toggle('is-active');
+                        $target.classList.toggle('is-active');
+
+                    });
+                });
+            }
+
+        });
+    </script>
 </body>
 
 </html>

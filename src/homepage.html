@@ -5,46 +5,83 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>homepage</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        
-    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
 </head>
 
 <body>
-    <header class="header">
-        <h2> Home</h2>
-    </header>
+   
+    <section class="section">
+        <div class="container">
+            <div class="upper-circle is-rounded is-flex is-justify-content-center is-align-items-center">
+                <figure class="image is-rounded is-128x128">
+                    <img src="images/profile.jpg" class="is-rounded" alt="Profile">
+                </figure>
+                
+                
+            </div>
+            
+            <figure class="image is-256x256">
+                <img src="images/backgroung.jpg" alt="Main Image"  >
+            </figure>
+            <h1 class="title is-1 main-text has-text-centered">Hi, I'm <span>Sara</span></h1>
+            
+            <h2 class="subtitle is-3 next-text has-text-centered">Software Developer & <span>Designer</span></h2>
 
-    <div class="container">
-        <img src="images/backgroung.jpg" alt="Main Image" class="main-image">
-        <h1 class="main-text">Hi, I'm <span>Sara</span></h1>
-    
-        <h2 class="next-text">Software Developer & <span>Designer</span></h2>
+            
+                <div class="columns is-mobile is-multiline circle-container my-8">
+                    <div class="column is-half-mobile is-one-quarter-desktop">
+                        <div class="circle">
+                            <p class="title is-4 has-text-centered"><a href="aboutpage.html">About Me</a></p>
+                        </div>
+                    </div>
+                
+                    <div class="column is-half-mobile is-one-quarter-desktop">
+                        <div class="circle">
+                            <p class="title is-4 has-text-centered"><a href="resumepage.html">Resume</a></p>
+                        </div>
+                    </div>
+                
+                    <div class="column is-half-mobile is-one-quarter-desktop">
+                        <div class="circle">
+                            <p class="title is-4 has-text-centered"><a href="servicepage.html">Service</a></p>
+                        </div>
+                    </div>
+                
+                    <div class="column is-half-mobile is-one-quarter-desktop">
+                        <div class="circle">
+                            <p class="title is-4 has-text-centered"><a href="blogpage.html">Blog</a></p>
+                        </div>
+                    </div>
+                </div>
+                
 
-        <div class="circle-container">
-            <div class="circle">
-                <div class="circle-text"><a href="aboutpage.html"> About Me </a></div>
-            </div>
-            <div class="circle">
-                <div class="circle-text"><a href="resumepage.html"> Resume </a></div>
-            </div>
-            <div class="circle">
-                <div class="circle-text"><a href="servicepage.html"> Service </a></div>
-            </div>
-            <div class="circle">
-                <div class="circle-text"><a href="blogpage.html"> Blog </a></div>
-            </div>
+            
         </div>
-        <div class="upper-circle">
-            <img src="images/profile.jpg" alt="Circle Image" class="upper-circle">
-        </div>
-    </div>
+    </section>
 
-    <footer>
-        <a href="contactpage.html">Contact Me</a>
+    <footer class="fhas-text-centered has-background-warning">
+        <div class="content has-text-centered">
+            <p class="title is-4"><a href="contactpage.html">Contact Me</a></p>
+        </div>
     </footer>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+            if ($navbarBurgers.length > 0) {
+                $navbarBurgers.forEach(function ($el) {
+                    $el.addEventListener('click', function () {
+                        const target = $el.dataset.target;
+                        const $target = document.getElementById(target);
+
+                        $el.classList.toggle('is-active');
+                        $target.classList.toggle('is-active');
+                    });
+                });
+            }
+        });
+    </script>
 </body>
 
 </html>
